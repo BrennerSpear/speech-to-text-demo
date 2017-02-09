@@ -1,0 +1,14 @@
+
+.DS_Store
+.AppleDouble
+.LSOverride
+iisnode.yml
+npm-debug.log
+
+node_modules
+client/bower_components
+public/dist
+lib/
+
+.env
+PalFinder-f5b1b61fd250.json

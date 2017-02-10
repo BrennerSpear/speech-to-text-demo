@@ -10,4 +10,9 @@ angular.module('myApp').controller('home', function($scope, $rootScope, $locatio
     socket.runSocket();
   };
 
+  $scope.stop = function() {
+
+    socket.stopRecording();
+  }
+
 });

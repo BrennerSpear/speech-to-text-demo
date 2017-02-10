@@ -17,6 +17,7 @@
   ],
   "dependencies": {
     "angular": "^1.6.2",
-    "angular-route": "^1.6.2"
+    "angular-route": "^1.6.2",
+    "binaryjs": "^0.2.1"
   }
 }

@@ -7,7 +7,7 @@ var app = express();
 
 
 app.use(require('morgan')('combined'));
-app.use(require('body-parser').urlencoded({ extended: true }));
+// app.use(require('body-parser').urlencoded({ extended: true }));
 
 app.use('', router);
 

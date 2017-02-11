@@ -5,7 +5,7 @@
 angular.module('myApp').controller('home', function($scope, $rootScope, $location, socket, speech) {
 
 
-  $scope.listen = function() {
+  $scope.record = function() {
 
     socket.runSocket();
   };
@@ -14,5 +14,11 @@ angular.module('myApp').controller('home', function($scope, $rootScope, $locatio
 
     socket.stopRecording();
   }
+
+  $scope.startButton = function() {
+
+    speech.listen();
+  };
+
 
 });

@@ -91,7 +91,7 @@ angular.module('myApp').factory('socket', function($http) {
       });
 
       //open new socket
-      var audioClient = new BinaryClient('ws://localhost:9001');
+      var audioClient = new BinaryClient('wss://localhost:9001');
 
       audioClient.on('open', function() {
         console.log('opening socket on localhost:9001');
@@ -113,12 +113,8 @@ angular.module('myApp').factory('socket', function($http) {
       //   });
       // });
 
-
       this.streaming = true;
     }
-
-
-
 
   };
 

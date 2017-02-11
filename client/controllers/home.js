@@ -15,4 +15,8 @@ angular.module('myApp').controller('home', function($scope, $rootScope, $locatio
     socket.stopRecording();
   }
 
+  $scope.write = function() {
+    socket.writeText();
+  }
+
 });

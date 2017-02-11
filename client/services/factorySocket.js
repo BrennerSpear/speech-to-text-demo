@@ -16,6 +16,11 @@ angular.module('myApp').factory('socket', function($http) {
     }
   }
 
+  factory.writeText = function() {
+    console.log('writeText button...');
+    window.textStream.write('from the writeText button');
+  }
+
   factory.runSocket = function() {
 
     //comes out as F32, we need it in I16
@@ -86,16 +91,34 @@ angular.module('myApp').factory('socket', function($http) {
       });
 
       //open new socket
-      var client = new BinaryClient('ws://localhost:9001');
+      var audioClient = new BinaryClient('ws://localhost:9001');
 
-      client.on('open', function() {
+      audioClient.on('open', function() {
         console.log('opening socket on localhost:9001');
         // for the sake of this example let's put the stream in the window
-        window.Stream = client.createStream();
+        window.Stream = audioClient.createStream();
       });
+
+
+      // var textClient = new BinaryClient('ws://localhost:9002');
+
+      // textClient.on('stream', (textStream, meta) => {
+      //   console.log('streaming socket on localhost:9002');
+
+      //   window.textStream = textStream;
+
+      //   window.textStream.on('data', data => {
+      //     console.log()
+      //     console.log("from 9002: ", data);
+      //   });
+      // });
+
 
       this.streaming = true;
     }
+
+
+
 
   };
 
